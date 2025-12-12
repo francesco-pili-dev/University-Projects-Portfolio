@@ -1,0 +1,16 @@
+name: fisher
+channels:
+  - defaults
+dependencies:
+  - mlxtend
+  - jupyter < 7
+  - matplotlib>=3.5.2
+  - numpy>=1.21.5
+  - pandas>=1.4.4
+  - pip>=22.1.2
+  - python>=3.10.4
+  - scikit-learn>=1.1.1
+  - scipy>=1.7.3
+  - imbalanced-learn
+  - colorama
+  - seaborn
