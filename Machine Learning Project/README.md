@@ -42,6 +42,3 @@ L'analisi ha mostrato che la combinazione di [Nome Modello] con [Tecnica, es. St
 Tutti i passaggi di ottimizzazione degli iperparametri sono documentati nel codice di training separato.
 
 ## 🚀 Come eseguire il codice
-1. Clona il repository:
-   ```bash
-   git clone [https://github.com/TuoUsername/Fish-Market-ML.git](https://github.com/FrancCBrain/Machine Learning Project.git)
