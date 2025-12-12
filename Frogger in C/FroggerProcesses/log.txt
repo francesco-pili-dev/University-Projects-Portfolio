@@ -1,0 +1,12 @@
+Corsia 0 | id = 0 |  x = 8 | y = 28
+Corsia 1 | id = 2 |  x = 47 | y = 26
+Corsia 1 | id = 3 |  x = 8 | y = 26
+Corsia 2 | id = 4 |  x = 63 | y = 24
+Corsia 2 | id = 5 |  x = 14 | y = 24
+Corsia 3 | id = 6 |  x = 55 | y = 22
+Corsia 3 | id = 7 |  x = 35 | y = 22
+Corsia 0 | id = 1 |  x = 66 | y = 28
+c: 261 choise: -1 pos: 1
+c: 260 choise: -1 pos: 0
+c: 261 choise: -1 pos: 1
+c: 10 choise: 1 pos: 1
