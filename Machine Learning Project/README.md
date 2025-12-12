@@ -41,4 +41,13 @@ Il progetto analizza come variano le performance applicando diverse trasformazio
 L'analisi ha mostrato che la combinazione di [Nome Modello] con [Tecnica, es. Standardizzazione] ha prodotto i risultati migliori, con un'accuratezza del XX%.
 Tutti i passaggi di ottimizzazione degli iperparametri sono documentati nel codice di training separato.
 
+## 👥 Il Team
+Questo progetto è stato realizzato in collaborazione accademica da:
+
+* **Francesco Pili** - [GitHub](https://github.com/FranCBrain)
+* **Francesco Marotto** -
+* **Stefano Lilliu** - 
+
+
 ## 🚀 Come eseguire il codice
+
