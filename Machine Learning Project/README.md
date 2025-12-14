@@ -1,51 +1,65 @@
-# Progetto Machine Learning
+# 🐟 Fish Species Classification: Comparative ML Analysis
 
-## Fish Market Prediction System 🐟
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-Un sistema completo di Machine Learning per l'analisi, la classificazione e la regressione basato sul dataset *Fish Market*.
-Il progetto confronta le performance di algoritmi standard (Scikit-learn) con algoritmi custom implementati da zero, valutando l'impatto di diverse tecniche di pre-processing.
+## 📌 Project Overview
+This project implements an End-to-End Machine Learning pipeline to classify **7 different fish species** based on their physical attributes (weight, length, height, width).
 
-## 🎯 Obiettivi del Progetto
-L'obiettivo è individuare la combinazione ottimale (Modello + Pre-processing) per predire le caratteristiche delle specie ittiche, attraverso un'analisi comparativa rigorosa.
+The goal was not just to train a model, but to conduct a **comparative analysis** of 7 different algorithms, optimizing them through **Data Scaling**, **Oversampling (SMOTE)**, and **Feature Selection** to solve class imbalance and overfitting issues.
 
-## 🛠 Tecnologie Utilizzate
-- **Python 3.x**
-- **Data Manipulation:** Pandas, NumPy
-- **ML Libraries:** Scikit-learn (SVM, Random Forest, KNN, etc.)
-- **Visualization:** Matplotlib, Seaborn
+## 📂 The Dataset
+The dataset used is the [Fish Market Dataset](https://www.kaggle.com/datasets/aungpyaeap/fish-market) from Kaggle.
+* **Records:** 159 observations.
+* **Target:** Species (Bream, Roach, Whitefish, Parkki, Perch, Pike, Smelt).
+* **Features:** Weight, Length1 (Vertical), Length2 (Diagonal), Length3 (Cross), Height, Width.
 
-## ⚙️ Funzionalità Chiave
+## ⚙️ Methodology & Pipeline
 
-### 1. CLI Interattiva (User Menu)
-Il software dispone di un'interfaccia a riga di comando che permette all'utente di:
-- Selezionare il tipo di task (Classificazione o Regressione).
-- Scegliere il modello predittivo (già ottimizzato).
-- Eseguire analisi esplorative sul dataset.
+### 1. Exploratory Data Analysis (EDA)
+* Analyzed attribute distribution and correlation matrix.
+* Identified class imbalance (e.g., *Perch* had 56 samples, while *Whitefish* had only 6).
+* Handled missing/erroneous values (identified a record with Weight=0).
 
-### 2. Modelli Implementati (5 Tecniche)
-Ho confrontato 5 approcci distinti:
-- **3 Modelli Scikit-learn:** (Es. Decision Tree, SVM, KNN) con tuning degli iperparametri.
-- **1 Custom Simple Estimator:** Un algoritmo di stima semplificato sviluppato ad hoc.
-- **1 Custom Multiple Estimator:** Un algoritmo di ensemble custom per migliorare la robustezza delle predizioni.
+### 2. Preprocessing & Optimization
+The following techniques were tested to improve model performance:
+* **Scaling:** Comparison between *StandardScaler*, *MinMaxScaler*, and *Normalization*.
+* **Balancing:** Applied **SMOTE (Synthetic Minority Over-sampling Technique)** to handle the imbalance of the minority classes (Whitefish, Parkki).
+* **Feature Selection:** Iterative testing to identify the optimal number of features (Optimal result found at **4 features**).
 
-### 3. Pipeline di Sperimentazione
-Il progetto analizza come variano le performance applicando diverse trasformazioni ai dati:
-- **Standardizzazione:** Confronto performance con/senza scaling dei dati.
-- **Feature Engineering:** Confronto con/senza Selezione o Aggregazione delle features.
-- **Data Balancing:** Gestione delle classi sbilanciate tramite tecniche di Undersampling e Oversampling.
+### 3. Models Implemented
+We trained and compared the following supervised learning algorithms:
+* **Decision Tree**
+* **Random Forest**
+* **Support Vector Classifier (SVC)**
+* **Naive Bayes**
+* **MLP Classifier (Multi-Layer Perceptron Neural Network)**
+* **Ensemble Methods:** Custom implementation of **Hard Voting** and **Soft Voting** classifiers.
 
-## 📊 Risultati e Metodologia
-*(Qui puoi inserire una breve frase sui risultati, ad esempio:)*
-L'analisi ha mostrato che la combinazione di [Nome Modello] con [Tecnica, es. Standardizzazione] ha prodotto i risultati migliori, con un'accuratezza del XX%.
-Tutti i passaggi di ottimizzazione degli iperparametri sono documentati nel codice di training separato.
+## 📊 Key Results
+The comparative analysis showed that **SVC** and **MLP (Neural Network)** were the top performers.
 
-## 👥 Il Team
-Questo progetto è stato realizzato in collaborazione accademica da:
+| Model | Accuracy (Baseline) | Accuracy (Optimized*) |
+| :--- | :---: | :---: |
+| **SVC** | 96.8% | **96.9%** |
+| **MLP Classifier** | 96.8% | **96.9%** |
+| Random Forest | 81.2% | 82.1% |
+| Naive Bayes | 53.1% | 62.5% |
+
+*\*Optimized with SMOTE and Cross Validation.*
+
+### Key Insights
+* **SMOTE Impact:** Oversampling significantly improved the recognition of minority classes (like *Whitefish*), which were previously misclassified as *Perch*.
+* **Feature Selection:** Reducing features from 6 to 4 maintained high accuracy while reducing model complexity.
+* **Normalization:** Interestingly, stratified sampling did not always yield better results compared to random splitting for this specific small dataset.
+ 
+
+## 👥 Credits
+This project was developed as a team effort for the *Machine Learning* course at the University of Cagliari.
 
 * **Francesco Pili** - [GitHub](https://github.com/FranCBrain)
 * **Francesco Marotto** -
 * **Stefano Lilliu** - 
 
-
-## 🚀 Come eseguire il codice
 
