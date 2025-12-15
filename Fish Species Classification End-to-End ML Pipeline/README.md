@@ -12,18 +12,18 @@ The dataset used is teh [Fish Market Dataset](https://www.kaggle.com/datasets/au
 
 ## Methodologi & Pipeline
 
-###1. Exploratory Data Analysis (EDA)
+### 1. Exploratory Data Analysis (EDA)
 * Analyzed attribute distribution and correlation matrix.
 * Identified class imbalance (e.g., *Perch* had 56 samples, while *Whitefish* ha only 6).
 * Handled missing/erroneous values (identified a record with Weight = 0).
 
-###2. Preprocessing & Optimization
+### 2. Preprocessing & Optimization
 The following techniuques were tested to improve model performance:
 * **Scaling:** Compraison between *StandaloneScaler*, *MimMaxScaler*, and *Normalization*.
 * **Balancing:** Applied **SMOTE (Synthetic Minority Over-sampling Technique)** to handle the imbalance of minority classes(Whitefish, Parkki).
 *  **Feature Selection:** Iterative testing to identify the optimal number of features (Optimal result found at **4 features**).
 
-###3. Models Implemented
+### 3. Models Implemented
 We trained and compared the following supervised learning algorithms:
 * **Decision Tree**
 * **Random Forest**
