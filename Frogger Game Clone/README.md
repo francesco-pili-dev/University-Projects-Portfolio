@@ -7,10 +7,6 @@ Beyond recreating the gameplay, the primary goal of this project was to explore 
 1.  **Multi-Process Version:** Based on `fork()` and IPC via Pipes.
 2.  **Multi-Threaded Version:** Based on `pthread`, Shared Memory, and Mutex synchronization.
 
-###  Gameplay
-*(Inserisci qui uno screenshot o una GIF del terminale mentre il gioco gira)*
-![Frogger Gameplay](path/to/your/screenshot.png)
-
 ## Technical Architecture
 
 ### 1. The Multi-Process Approach (`fork` & `pipe`)
