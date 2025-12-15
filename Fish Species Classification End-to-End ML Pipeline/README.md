@@ -50,7 +50,7 @@ We trained and compared the following supervised learning algorithms:
 The comparative analysis showet that **SVC** and **MLP (Neural Network)** were the top performers.
 
 ## Credits:
-Developed by
+Developed by <br>
 **Francesco Pili** - "https://github.com/francesco-pili-dev <br>
 **Francesco Marotto** - <br>
 **Stefano Lilliu** - <br>
